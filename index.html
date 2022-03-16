@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.0/dist/theme/white.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.5.0/styles/github.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="opening-slide.png" data-background-size="cover">
+        </section>
+        <section data-markdown>
+            <script type="text/template">
+              ## About Me
+
+              one
+
+              two
+
+              three
+
+              ---
+              ## About SessionStack
+
+              ---
+
+              ## Python AsyncIO
+
+              Introduced when
+              pep something
+
+              ---
+
+              ## Code example
+              ```python
+async def hello_world():
+    await asyncio.sleep(10)
+              ```
+
+              ---
+
+              ## Q&A
+
+              ---
+
+              ## Resources
+            </script>
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.0/dist/reveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.0/plugin/highlight/highlight.js"></script>
+    <script>
+      for (var slide of document.getElementsByTagName('section')){
+        if (!(slide.getAttribute('data-background-image') ||
+              slide.getAttribute('data-background-color') ||
+              slide.getAttribute('data-background-video') ||
+              slide.getAttribute('data-background-iframe'))){
+          slide.setAttribute('data-background-image', './image1.png')
+          slide.setAttribute('data-background-size', 'auto')
+          slide.setAttribute('data-background-color', '#f0f0f0')
+        }
+      }
+
+      Reveal.initialize({plugins: [RevealMarkdown, RevealHighlight], slideNumber: true});
+    </script>
+  </body>
+</html>
