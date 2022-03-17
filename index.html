@@ -27,7 +27,7 @@
               * VP Of Enginnering at SessionStack
               * More than 10 years of programming experience
               * Experience with typed and script languages - Python, Ruby, JavaScript, NodeJS, Java, C
-              * Interested of the whole stack - from frontend frameworks to infrastructure
+              * Interested in the whole stack - from frontend frameworks to infrastructure
               * Loves Mountain Biking &#x1F6B5;
 
               ---
@@ -193,11 +193,11 @@ import asyncio, time
 async def blocking():
   time.sleep(5)
   await asyncio.sleep(1)
-  print(f"finished at {time.strftime('%X')}")
+  print(f"blocking finished at {time.strftime('%X')}")
 
 async def non_blocking():
     await asyncio.sleep(5)
-    print(f"finished at {time.strftime('%X')}")
+    print(f"non blocking finished at {time.strftime('%X')}")
 
 async def main():
     await asyncio.gather(blocking(), non_blocking())
@@ -207,8 +207,8 @@ asyncio.run(main())
               ```
 
               ```txt
-finished at 12:12:51
-finished at 12:12:55
+blocking finished at 12:12:51
+non blocking finished at 12:12:55
               ```
 
               ---
@@ -381,8 +381,9 @@ async def root():
               slide.getAttribute('data-background-video') ||
               slide.getAttribute('data-background-iframe'))){
           slide.setAttribute('data-background-image', './image1.png')
-          slide.setAttribute('data-background-size', 'auto')
-          slide.setAttribute('data-background-color', '#f0f0f0')
+          slide.setAttribute('data-background-size', 'contain')
+          slide.setAttribute('data-background-repeat', 'repeat')
+          slide.setAttribute('data-background-color', '#fff')
         }
       }
 
